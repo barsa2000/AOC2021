@@ -10,13 +10,15 @@ Advent of Code 2021 solutions written in [Rust](https://www.rust-lang.org/) :cra
 
 ## Advent of Code 2021 Story
 
-> After saving Christmas five years in a row, you've decided to take a vacation at a nice resort on a tropical island. Surely, Christmas will go on without you.
+>You're minding your own business on a ship at sea when the overboard alarm goes off! You rush to see if you can help. Apparently, one of the Elves tripped and accidentally sent the sleigh keys flying into the ocean!
 >
-> The tropical island has its own currency and is entirely cash-only. The gold coins used there have a little picture of a starfish; the locals just call them stars. None of the currency exchanges seem to have heard of them, but somehow, you'll need to find fifty of these coins by the time you arrive so you can pay the deposit on your room. 
+>Before you know it, you're inside a submarine the Elves keep ready for situations like this. It's covered in Christmas lights (because of course it is), and it even has an experimental antenna that should be able to track the keys if you can boost its signal strength high enough; there's a little meter that indicates the antenna's signal strength by displaying 0-50 stars.
+>
+>Your instincts tell you that in order to save Christmas, you'll need to get all fifty stars by December 25th.
 
 ## Solutions
 
 | Problem                                                                 | Solution                 | #1  |          #1 Answer | #2  |           #2 Answer |
 | :---------------------------------------------------------------------- | :----------------------- | :-: | -----------------: | :-: | ------------------: |
-| [Day 1: Report Repair](https://adventofcode.com/2020/day/1)             | [day01.rs](src/day01.rs) |  ✓  |           **1559** |  ✓  |            **1600** |
+| [Day 1: Report Repair](https://adventofcode.com/2021/day/1)             | [day01.rs](src/day01.rs) |  ✓  |           **1559** |  ✓  |            **1600** |
 
