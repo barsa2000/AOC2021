@@ -1,0 +1,18 @@
+[package]
+name = "advent_of_code_2021"
+version = "0.1.0"
+authors = ["barsa2000 <barsanti-filippo2@hotmail.it>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+aoc-runner="0.3.0"
+aoc-runner-derive="0.3.0"
+boolinator = "2.4.0"
+rust-crypto = "0.2.36"
+regex = "1.4.2"
+lazy_static = "1.4.0"
+mut_static = "5.0.0"
+ndarray = "0.14.0"
+binary-tree = "0.2.0"
