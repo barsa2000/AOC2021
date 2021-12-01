@@ -14,5 +14,5 @@ Advent of Code 2021 solutions written in [Rust](https://www.rust-lang.org/) :cra
 
 | Problem                                                                 | Solution                 | #1  |          #1 Answer | #2  |           #2 Answer |
 | :---------------------------------------------------------------------- | :----------------------- | :-: | -----------------: | :-: | ------------------: |
-| [Day 1: Report Repair](https://adventofcode.com/2020/day/1)             | [day01.rs](src/day01.rs) |  ✓  |            **155** |  ✓  |            **1600** |
+| [Day 1: Report Repair](https://adventofcode.com/2020/day/1)             | [day01.rs](src/day01.rs) |  ✓  |           **1559** |  ✓  |            **1600** |
 
