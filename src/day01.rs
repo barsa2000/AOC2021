@@ -18,13 +18,9 @@ fn part1(input: &[i32]) -> usize {
 fn part2(input: &[i32]) -> usize {
     input
         .iter()
-        .zip(input.iter().skip(1))
-        .zip(input.iter().skip(2))
-        .map(|((a, b), c)| a + b + c)
-        .fold((i32::max_value(), 0), |(last, counter), v| {
-            (v, (if v > last {counter + 1} else {counter}))
-        })
-        .1
+        .zip(input.iter().skip(3))
+        .filter(|(a, b)| b > a)
+        .count()
 }
 
 #[cfg(test)]
