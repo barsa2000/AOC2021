@@ -1,8 +1,8 @@
 # Advent Of Code 2021
 
-![](https://img.shields.io/badge/day%20📅-0-blue)
-![](https://img.shields.io/badge/stars%20⭐-0-yellow)
-![](https://img.shields.io/badge/days%20completed-0-red)
+![](https://img.shields.io/badge/day%20📅-1-blue)
+![](https://img.shields.io/badge/stars%20⭐-2-yellow)
+![](https://img.shields.io/badge/days%20completed-1-red)
 [![Rust CI](https://github.com/barsa2000/AOC2021/actions/workflows/ci.yml/badge.svg)](https://github.com/barsa2000/AOC2021/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
