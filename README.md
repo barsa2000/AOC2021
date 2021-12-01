@@ -1,6 +1,6 @@
 # Advent Of Code 2021
 
-![Rust CI](https://github.com/barsa2000/AOC2021/workflows/Rust%20CI/badge.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Rust CI](https://github.com/barsa2000/AOC2021/actions/workflows/ci.yml/badge.svg)](https://github.com/barsa2000/AOC2021/actions/workflows/ci.yml)
 
 Advent of Code 2021 solutions written in [Rust](https://www.rust-lang.org/) :crab: .
 
