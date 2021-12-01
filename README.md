@@ -1,10 +1,14 @@
 # Advent Of Code 2021
 
-[![Rust CI](https://github.com/barsa2000/AOC2021/actions/workflows/ci.yml/badge.svg)](https://github.com/barsa2000/AOC2021/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![](https://img.shields.io/badge/day%20📅-0-blue)
+![](https://img.shields.io/badge/stars%20⭐-0-yellow)
+![](https://img.shields.io/badge/days%20completed-0-red)
+[![Rust CI](https://github.com/barsa2000/AOC2021/actions/workflows/ci.yml/badge.svg)](https://github.com/barsa2000/AOC2021/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Advent of Code 2021 solutions written in [Rust](https://www.rust-lang.org/) :crab: .
 
-## Advent of Code 2020 Story
+## Advent of Code 2021 Story
 
 > After saving Christmas five years in a row, you've decided to take a vacation at a nice resort on a tropical island. Surely, Christmas will go on without you.
 >
