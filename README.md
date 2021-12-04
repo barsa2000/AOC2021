@@ -23,4 +23,5 @@ Advent of Code 2021 solutions written in [Rust](https://www.rust-lang.org/) :cra
 | [Day 1: Report Repair](https://adventofcode.com/2021/day/1)             | [day01.rs](src/day01.rs) |  ✓  |           **1559** |  ✓  |            **1600** |
 | [Day 2: Dive!](https://adventofcode.com/2021/day/2)                     | [day02.rs](src/day02.rs) |  ✓  |        **1488669** |  ✓  |      **1176514794** |
 | [Day 3: Binary Diagnostic](https://adventofcode.com/2021/day/3)         | [day03.rs](src/day03.rs) |  ✓  |        **1540244** |  ✓  |         **4203981** |
+| [Day 4: Giant Squid](https://adventofcode.com/2021/day/4)               | [day04.rs](src/day04.rs) |  ✓  |           **8136** |  ✓  |           **12738** |
 
