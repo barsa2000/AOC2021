@@ -1,5 +1,95 @@
 use aoc_runner_derive::{aoc, aoc_generator};
 
+#[aoc_generator(day3, part1, flipped)]
+#[aoc_generator(day3, part2, flipped)]
+fn parse_input_flipped(input: &str) -> (Vec<Vec<bool>>, usize, usize) {
+    let h = input.lines().next().unwrap().len();
+    let w = input.lines().count();
+    let mut out = vec![vec![]; h];
+
+    input.lines().for_each(|l| {
+        l.chars().enumerate().for_each(|(j, c)| {
+            out.get_mut(j).unwrap().push(c.to_digit(10).unwrap() != 0);
+        });
+    });
+
+    (out, w, h)
+}
+
+#[aoc(day3, part1, flipped)]
+fn part1_flipped(input: &(Vec<Vec<bool>>, usize, usize)) -> usize {
+    let w = input.1;
+    //let h = input.2;
+    let input = &input.0;
+    let (gamma, epsilon) = input
+        .iter()
+        .map(|v| v.iter().filter(|b| **b).count())
+        .fold((0, 0), |(g, e), n| {
+            (g << 1 | (n * 2 < w) as usize, e << 1 | (n * 2 > w) as usize)
+        });
+
+    gamma * epsilon
+}
+
+#[aoc(day3, part2, flipped)]
+fn part2_flipped(input: &(Vec<Vec<bool>>, usize, usize)) -> usize {
+    let w = input.1;
+    let h = input.2;
+    let input = &input.0;
+
+    //(oxy_mask, co2_mask)
+    let mut mask = vec![(true, true); w];
+
+    for i in 0..h {
+        let (count_oxy, count_co2) = mask.iter().fold((0, 0), |(b_acc, c_acc), (bb, cb)| {
+            (b_acc + *bb as usize, c_acc + *cb as usize)
+        });
+        if count_oxy == 1 && count_co2 == 1 {
+            break;
+        }
+
+        let (ones_oxy, ones_co2) = input.get(i).unwrap().iter().zip(mask.iter()).fold(
+            (0, 0),
+            |(acc_oxy, acc_co2), (v, (b_oxy, b_co2))| {
+                (
+                    acc_oxy + (*b_oxy && *v) as usize,
+                    acc_co2 + (*b_co2 && *v) as usize,
+                )
+            },
+        );
+
+        input
+            .get(i)
+            .unwrap()
+            .iter()
+            .zip(mask.iter_mut())
+            .filter(|(_, (m_oxy, m_co2))| *m_oxy || *m_co2)
+            .for_each(|(b, (m_oxy, m_co2))| {
+                if count_oxy != 1 && *m_oxy {
+                    if ones_oxy * 2 != count_oxy {
+                        *m_oxy = *b == (ones_oxy * 2 > count_oxy);
+                    } else {
+                        *m_oxy = *b;
+                    }
+                }
+                if count_co2 != 1 && *m_co2 {
+                    *m_co2 =
+                        ((ones_co2 * 2 == count_co2) && !*b) || (*b == (ones_co2 * 2 < count_co2));
+                }
+            });
+    }
+
+    let oxy_pos = mask.iter().position(|(m, _)| *m).unwrap();
+    let co2_pos = mask.iter().position(|(_, m)| *m).unwrap();
+    let (oxy, co2) = input.iter().fold((0, 0), |(acc_o, acc_c), b| {
+        (
+            acc_o << 1 | *b.get(oxy_pos).unwrap() as usize,
+            acc_c << 1 | *b.get(co2_pos).unwrap() as usize,
+        )
+    });
+    oxy * co2
+}
+
 #[aoc_generator(day3)]
 fn parse_input(input: &str) -> Vec<Vec<bool>> {
     input
@@ -139,5 +229,39 @@ mod tests {
 00010
 01010";
         assert_eq!(part2(&parse_input(input)), 230);
+    }
+
+    #[test]
+    fn sample1_flipped() {
+        let input = "00100
+11110
+10110
+10111
+10101
+01111
+00111
+11100
+10000
+11001
+00010
+01010";
+        assert_eq!(part1_flipped(&parse_input_flipped(input)), 198);
+    }
+
+    #[test]
+    fn sample2_flipped() {
+        let input = "00100
+11110
+10110
+10111
+10101
+01111
+00111
+11100
+10000
+11001
+00010
+01010";
+        assert_eq!(part2_flipped(&parse_input_flipped(input)), 230);
     }
 }
