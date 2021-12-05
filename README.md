@@ -24,4 +24,5 @@ Advent of Code 2021 solutions written in [Rust](https://www.rust-lang.org/) :cra
 | [Day 2: Dive!](https://adventofcode.com/2021/day/2)                     | [day02.rs](src/day02.rs) |  ✓  |        **1488669** |  ✓  |      **1176514794** |
 | [Day 3: Binary Diagnostic](https://adventofcode.com/2021/day/3)         | [day03.rs](src/day03.rs) |  ✓  |        **1540244** |  ✓  |         **4203981** |
 | [Day 4: Giant Squid](https://adventofcode.com/2021/day/4)               | [day04.rs](src/day04.rs) |  ✓  |           **8136** |  ✓  |           **12738** |
+| [Day 5: Hydrothermal Venture](https://adventofcode.com/2021/day/5)      | [day05.rs](src/day05.rs) |  ✓  |           **7468** |  ✓  |           **22364** |
 
