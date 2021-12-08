@@ -1,17 +1,19 @@
 use aoc_runner_derive::{aoc, aoc_generator};
 
+type Parsed = Vec<i64>;
+
 #[aoc_generator(day1)]
-fn parse_input(input: &str) -> Vec<i32> {
+fn parse_input(input: &str) -> Parsed {
     todo!()
 }
 
 #[aoc(day1, part1)]
-fn part1(input: &[i32]) -> i32 {
+fn part1(input: &Parsed) -> i32 {
     todo!()
 }
 
 #[aoc(day1, part2)]
-fn part2(input: &[i32]) -> i32 {
+fn part2(input: &Parsed) -> i32 {
     todo!()
 }
 
