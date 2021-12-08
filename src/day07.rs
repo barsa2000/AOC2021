@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 use aoc_runner_derive::{aoc, aoc_generator};
 
 type Parsed = (Vec<u64>, u64);
@@ -24,7 +22,7 @@ fn part1(input: &Parsed) -> u64 {
 
     let mut len = positions.len().to_owned();
     while len > 1 {
-        let (mut left, mut right) = positions.split_at_mut(len / 2);
+        let (left, right) = positions.split_at_mut(len / 2);
 
         let sum_left = left.iter().sum::<u64>();
         let sum_right = right.iter().sum::<u64>();
