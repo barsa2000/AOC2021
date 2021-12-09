@@ -28,4 +28,5 @@ Advent of Code 2021 solutions written in [Rust](https://www.rust-lang.org/) :cra
 | [Day 6: Lanternfish](https://adventofcode.com/2021/day/6)               | [day06.rs](src/day06.rs) |  ✓  |         **389726** |  ✓  |   **1743335992042** |
 | [Day 7: The Treachery of Whales](https://adventofcode.com/2021/day/7)   | [day07.rs](src/day07.rs) |  ✓  |         **335330** |  ✓  |        **92439766** |
 | [Day 8: Seven Segment Search](https://adventofcode.com/2021/day/8)      | [day08.rs](src/day08.rs) |  ✓  |            **369** |  ✓  |         **1031553** |
+| [Day 9: Smoke Basin](https://adventofcode.com/2021/day/9)               | [day09.rs](src/day09.rs) |  ✓  |            **550** |  ✓  |         **1100682** |
 
