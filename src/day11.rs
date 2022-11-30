@@ -92,29 +92,27 @@ fn calc_overflows(map: &mut Parsed, flashed: &mut Vec<Vec<bool>>) -> bool {
                         map[y + 1][x] += 1;
                         map[y - 1][x] += 1;
                     }
+                } else if y == 0 {
+                    map[y][x + 1] += 1;
+                    map[y][x - 1] += 1;
+                    map[y + 1][x - 1] += 1;
+                    map[y + 1][x] += 1;
+                    map[y + 1][x + 1] += 1;
+                } else if y == map.len() - 1 {
+                    map[y][x + 1] += 1;
+                    map[y][x - 1] += 1;
+                    map[y - 1][x - 1] += 1;
+                    map[y - 1][x] += 1;
+                    map[y - 1][x + 1] += 1;
                 } else {
-                    if y == 0 {
-                        map[y][x + 1] += 1;
-                        map[y][x - 1] += 1;
-                        map[y + 1][x - 1] += 1;
-                        map[y + 1][x] += 1;
-                        map[y + 1][x + 1] += 1;
-                    } else if y == map.len() - 1 {
-                        map[y][x + 1] += 1;
-                        map[y][x - 1] += 1;
-                        map[y - 1][x - 1] += 1;
-                        map[y - 1][x] += 1;
-                        map[y - 1][x + 1] += 1;
-                    } else {
-                        map[y - 1][x - 1] += 1;
-                        map[y - 1][x] += 1;
-                        map[y - 1][x + 1] += 1;
-                        map[y][x - 1] += 1;
-                        map[y][x + 1] += 1;
-                        map[y + 1][x - 1] += 1;
-                        map[y + 1][x] += 1;
-                        map[y + 1][x + 1] += 1;
-                    }
+                    map[y - 1][x - 1] += 1;
+                    map[y - 1][x] += 1;
+                    map[y - 1][x + 1] += 1;
+                    map[y][x - 1] += 1;
+                    map[y][x + 1] += 1;
+                    map[y + 1][x - 1] += 1;
+                    map[y + 1][x] += 1;
+                    map[y + 1][x + 1] += 1;
                 }
             }
         }
