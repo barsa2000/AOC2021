@@ -139,19 +139,15 @@ fn part2(input: &Vec<Vec<bool>>) -> usize {
 
     for i in 0..len {
         if oxy_count > 1 {
-            oxy_vec = oxy_vec
-                .iter()
-                .filter(|v| {
-                    let b = v.get(i).unwrap();
-                    let b_ones = oxy_ones.get(i).unwrap();
-                    if *b_ones * 2 == oxy_count {
-                        *b
-                    } else {
-                        *b == (*b_ones * 2 > oxy_count)
-                    }
-                })
-                .cloned()
-                .collect();
+            oxy_vec.retain(|v| {
+                let b = v.get(i).unwrap();
+                let b_ones = oxy_ones.get(i).unwrap();
+                if *b_ones * 2 == oxy_count {
+                    *b
+                } else {
+                    *b == (*b_ones * 2 > oxy_count)
+                }
+            });
 
             oxy_ones = count_ones(&oxy_vec);
             oxy_count = oxy_vec.len();
@@ -160,17 +156,13 @@ fn part2(input: &Vec<Vec<bool>>) -> usize {
             // println!("{}: {:?}", oxy_count, oxy_vec);
         }
         if co2_count > 1 {
-            co2_vec = co2_vec
-                .iter()
-                .filter(|v| {
-                    let b = v.get(i).unwrap();
-                    let b_ones = co2_ones.get(i).unwrap();
-                    let least_common = *b_ones * 2 < co2_count;
-                    //*b == least_common
-                    ((*b_ones * 2 == co2_count) && !*b) || (*b == least_common)
-                })
-                .cloned()
-                .collect();
+            co2_vec.retain(|v| {
+                let b = v.get(i).unwrap();
+                let b_ones = co2_ones.get(i).unwrap();
+                let least_common = *b_ones * 2 < co2_count;
+                //*b == least_common
+                ((*b_ones * 2 == co2_count) && !*b) || (*b == least_common)
+            });
 
             co2_ones = count_ones(&co2_vec);
             co2_count = co2_vec.len();
