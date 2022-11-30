@@ -30,7 +30,7 @@ Advent of Code 2021 solutions written in [Rust](https://www.rust-lang.org/) :cra
 | [Day 8: Seven Segment Search](https://adventofcode.com/2021/day/8)      | [day08.rs](src/day08.rs) |  ✓  |     **369** |  ✓  |       **1031553** |
 | [Day 9: Smoke Basin](https://adventofcode.com/2021/day/9)               | [day09.rs](src/day09.rs) |  ✓  |     **550** |  ✓  |       **1100682** |
 | [Day 10: Syntax Scoring](https://adventofcode.com/2021/day/10)          | [day10.rs](src/day10.rs) |  ✓  |  **296535** |  ✓  |    **4245130838** |
-| [Day 11: Dumbo Octopus](https://adventofcode.com/2021/day/11)           | [day11.rs](src/day11.rs) |     |             |     |                   |
+| [Day 11: Dumbo Octopus](https://adventofcode.com/2021/day/11)           | [day11.rs](src/day11.rs) |  ✓  |    **1700** |  ✓  |           **273** |
 | [Day 12: Passage Pathing](https://adventofcode.com/2021/day/12)         | [day12.rs](src/day12.rs) |     |             |     |                   |
 | [Day 13: Transparent Origami](https://adventofcode.com/2021/day/13)     | [day13.rs](src/day13.rs) |     |             |     |                   |
 | [Day 14: Extended Polymerization](https://adventofcode.com/2021/day/14) | [day14.rs](src/day14.rs) |     |             |     |                   |
